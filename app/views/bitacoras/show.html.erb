@@ -1,0 +1,95 @@
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<h2><b>Beneficiario:</b><%= @bitacora.nombre %></h2>
+</div>
+<div class="col-lg-12">
+<%= link_to 'Editar', edit_bitacora_path(@bitacora), class: 'btn btn-primary' %> 
+<%= link_to 'Atras', bitacoras_path, class: 'btn btn-primary'%>
+</div>
+<div class="col-lg-7  custyle">
+    <table class="table table-striped custab">
+<thead> 
+<tr>
+  <th >Campos</th>
+  <th >Información</th>
+</tr>
+</thead>
+
+    <tbody>
+    <tr>
+        <th class="thshow">Nombre:</th>
+        <td class="tdshow"><%= @bitacora.nombre %></td>
+
+      </tr> 
+       <tr>
+        <th class="thshow">Telefono:</th>
+        <td class="tdshow"><%= @bitacora.telefono %></td>
+
+      </tr>
+      <tr>
+        <th class="thshow">Email:</th>
+        <td class="tdshow"><%= @bitacora.correo %></td>
+      </tr>
+      <tr>
+        <th class="thshow">Municipio:</th>
+        <td class="tdshow"> <%= @bitacora.municipio %></td>
+      </tr>
+      <tr>  
+         <th class="thshow"> Estado</th>
+         <td class="tdshow"><%= @bitacora.estado %></td>
+      </tr>
+      <tr>  
+          <th class="thshow">Area:</th>
+          <td class="tdshow"><%= @bitacora.area %></td>
+      </tr>
+      <tr>  
+          <th class="thshow">Acreditado</th>
+          <td class="tdshow"><%= @bitacora.acreditado %></td>
+      </tr>
+      <tr>  
+          <th class="thshow">Alcalde</th>
+          <td class="tdshow"><%= @bitacora.alcalde  %></td>
+      </tr>
+      <tr>  
+          <th class="thshow">Esquema:</th>
+          <td class="tdshow"><%= @bitacora.esquema %></td>
+      </tr>
+      <tr>  
+          <th class="thshow">Convenio</th>
+          <td class="tdshow"> <%= @bitacora.convenio %></td>
+      </tr>
+      <tr>  
+          <th class="thshow">Tipo:</th>
+          <td class="tdshow"><%= @bitacora.tipo %></td>
+      </tr>
+       <tr>  
+          <th class="thshow"> Acuerdo: </th>
+          <td class="tdshow"><%= @bitacora.acuerdo %></td>
+      </tr>
+
+         <tr>  
+          <th class="thshow"> Fecha de Acuerdo: </th>
+          <td class="tdshow"><%= @bitacora.fechaacuerdo %></td>
+      </tr>
+      <tr>  
+          <th class="thshow">Fecha de seguimiento: </th>
+          <td class="tdshow"><%= @bitacora.fechaseguimiento %>  </td>
+      </tr>
+       <tr>  
+          <th class="thshow">Fecha de evaluación: </th>
+          <td class="tdshow"><%= @bitacora.fechaevaluacion %>  </td>
+      </tr>
+       <tr>  
+          <th class="thshow">Resultado: </th>
+          <td class="tdshow"><%= @bitacora.resultado %>  </td>
+      </tr>
+        
+    </tbody>
+    
+  </table>
+</div>
+
+</div>
+
+</div>
