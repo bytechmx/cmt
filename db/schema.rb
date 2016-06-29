@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160609223222) do
+ActiveRecord::Schema.define(version: 20160628230018) do
+
+  create_table "bitacoras", force: :cascade do |t|
+    t.string   "nombre"
+    t.integer  "telefono"
+    t.string   "correo"
+    t.string   "municipio"
+    t.string   "estado"
+    t.string   "area"
+    t.string   "acreditado"
+    t.string   "alcalde"
+    t.string   "esquema"
+    t.string   "convenio"
+    t.string   "tipo"
+    t.string   "acuerdo"
+    t.date     "fechaacuerdo"
+    t.date     "fechaseguimiento"
+    t.date     "fechaevaluacion"
+    t.string   "resultado"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
 
   create_table "countries", force: :cascade do |t|
     t.string   "name"
