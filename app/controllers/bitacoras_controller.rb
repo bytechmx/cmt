@@ -70,6 +70,6 @@ class BitacorasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bitacora_params
-      params.require(:bitacora).permit(:nombre, :telefono, :correo, :municipio, :estado, :area, :acreditado, :alcalde, :esquema, :convenio, :tipo, :acuerdo, :fechaacuerdo, :fechaseguimiento, :fechaevaluacion, :resultado)
+      params.require(:bitacora).permit(:nombre, :telefono, :correo, :municipio, :estado, :area, :acreditado, :alcalde, :esquema, :convenio, :tipo, :acuerdo, :fechaacuerdo, :fechaseguimiento, :fechaevaluacion, :resultado, :tema, :pcfechallamada, :pcfechacorreo, :pcfechaobservaciones, :scfechallamada, :scfechacorreo, :scobservaciones, :estatus, :gruposcomunitarios, :ampliacionmetas, :tcfechallamada, :tcfechacorreo, :tcobservaciones, :estructura)
     end
 end

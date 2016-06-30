@@ -7,89 +7,169 @@
 <%= link_to 'Editar', edit_bitacora_path(@bitacora), class: 'btn btn-primary' %> 
 <%= link_to 'Atras', bitacoras_path, class: 'btn btn-primary'%>
 </div>
-<div class="col-lg-7  custyle">
+<div class="col-lg-12  custyle">
+<h3>Datos de contacto</h3>
     <table class="table table-striped custab">
 <thead> 
 <tr>
-  <th >Campos</th>
-  <th >Información</th>
+  <th class="thshow">Estatus:</th>
+<th class="thshow">Nombre:</th>
+<th class="thshow">Telefono:</th>
+<th class="thshow">Email:</th>
+<th class="thshow"> Estado</th>
+<th class="thshow">Municipio:</th>
+<th class="thshow">Area:</th>
+<th class="thshow">Alcalde</th>
+<th class="thshow">Estructura:</th>
+
 </tr>
 </thead>
 
     <tbody>
+   
     <tr>
-        <th class="thshow">Nombre:</th>
-        <td class="tdshow"><%= @bitacora.nombre %></td>
-
-      </tr> 
-       <tr>
-        <th class="thshow">Telefono:</th>
-        <td class="tdshow"><%= @bitacora.telefono %></td>
-
-      </tr>
-      <tr>
-        <th class="thshow">Email:</th>
-        <td class="tdshow"><%= @bitacora.correo %></td>
-      </tr>
-      <tr>
-        <th class="thshow">Municipio:</th>
-        <td class="tdshow"> <%= @bitacora.municipio %></td>
-      </tr>
-      <tr>  
-         <th class="thshow"> Estado</th>
-         <td class="tdshow"><%= @bitacora.estado %></td>
-      </tr>
-      <tr>  
-          <th class="thshow">Area:</th>
-          <td class="tdshow"><%= @bitacora.area %></td>
-      </tr>
-      <tr>  
-          <th class="thshow">Acreditado</th>
-          <td class="tdshow"><%= @bitacora.acreditado %></td>
-      </tr>
-      <tr>  
-          <th class="thshow">Alcalde</th>
-          <td class="tdshow"><%= @bitacora.alcalde  %></td>
-      </tr>
-      <tr>  
-          <th class="thshow">Esquema:</th>
-          <td class="tdshow"><%= @bitacora.esquema %></td>
-      </tr>
-      <tr>  
-          <th class="thshow">Convenio</th>
-          <td class="tdshow"> <%= @bitacora.convenio %></td>
-      </tr>
-      <tr>  
-          <th class="thshow">Tipo:</th>
-          <td class="tdshow"><%= @bitacora.tipo %></td>
-      </tr>
-       <tr>  
-          <th class="thshow"> Acuerdo: </th>
-          <td class="tdshow"><%= @bitacora.acuerdo %></td>
-      </tr>
-
-         <tr>  
-          <th class="thshow"> Fecha de Acuerdo: </th>
-          <td class="tdshow"><%= @bitacora.fechaacuerdo %></td>
-      </tr>
-      <tr>  
-          <th class="thshow">Fecha de seguimiento: </th>
-          <td class="tdshow"><%= @bitacora.fechaseguimiento %>  </td>
-      </tr>
-       <tr>  
-          <th class="thshow">Fecha de evaluación: </th>
-          <td class="tdshow"><%= @bitacora.fechaevaluacion %>  </td>
-      </tr>
-       <tr>  
-          <th class="thshow">Resultado: </th>
-          <td class="tdshow"><%= @bitacora.resultado %>  </td>
-      </tr>
         
+        <td class="tdshow"><%= @bitacora.estatus %></td>        
+        <td class="tdshow"><%= @bitacora.nombre %></td>         
+        <td class="tdshow"><%= @bitacora.telefono %></td>     
+        <td class="tdshow"><%= @bitacora.correo %></td>
+        <td class="tdshow"><%= @bitacora.estado %></td>
+        <td class="tdshow"> <%= @bitacora.municipio %></td>
+        <td class="tdshow"><%= @bitacora.area %></td>
+        <td class="tdshow"><%= @bitacora.alcalde  %></td>       
+        <td class="tdshow"><%= @bitacora.estructura %></td>
+      </tr>
     </tbody>
-    
-  </table>
-</div>
+        </table>
+
+   </div>
+
 
 </div>
+
+<div class="row">
+<div class="col-lg-6">
+<h3>Vertiente</h3>
+<table class="table table-striped custab">
+<thead> 
+<tr>
+<th class="thshow">Grupos comunitarios</th>
+<th class="thshow">Ampliación de metas</th>
+</tr>
+</thead>
+ <tbody>
+   
+    <tr>
+        
+        <td class="tdshow"><%= @bitacora.gruposcomunitarios %></td>        
+        <td class="tdshow"><%= @bitacora.ampliacionmetas %></td>         
+        </tr>
+    </tbody>
+        </table>
+      
+   </div>
+
+
+<div class="col-lg-6">
+<h3>Convenio</h3>
+<table class="table table-striped custab">
+<thead> 
+<tr>
+<th class="thshow">Convenio</th>
+<th class="thshow">Tema</th>
+</tr>
+</thead>
+<tbody>
+   <tr>
+     <td class="tdshow"><%= @bitacora.convenio %></td>        
+      <td class="tdshow"><%= @bitacora.tema %></td>         
+        </tr>
+           </tbody>
+            </table>
+      </div>
+
+</div>
+
+<div class="row">
+<div class="col-lg-6">
+<h3>Primer contacto</h3>
+<table class="table table-striped custab">
+<thead> 
+<tr>
+<th class="thshow">Fecha/Llamada:</th>
+<th class="thshow">Fecha/correo:</th>
+<th class="thshow">Observaciones:</th>
+</tr>
+</thead>
+<tbody>
+   <tr>
+     <td class="tdshow"><%= @bitacora.pcfechallamada %></td>        
+      <td class="tdshow"><%= @bitacora.pcfechacorreo%></td>  
+      <td class="tdshow"><%= @bitacora.pcfechaobservaciones%></td>         
+        </tr>
+           </tbody>
+            </table>
+              </div>
+ 
+  <div class="col-lg-6">
+            <h3>Segundo Contacto contacto</h3>
+<table class="table table-striped custab">
+<thead> 
+<tr>
+<th class="thshow">Fecha/Llamada:</th>
+<th class="thshow">Fecha/correo:</th>
+<th class="thshow">Observaciones:</th>
+</tr>
+</thead>
+<tbody>
+   <tr>
+     <td class="tdshow"><%= @bitacora.scfechallamada%></td>        
+      <td class="tdshow"><%= @bitacora.scfechacorreo%></td>  
+      <td class="tdshow"><%= @bitacora.scfechacorreo%></td>         
+        </tr>
+           </tbody>
+            </table>
+            </div>
+ 
+<div class="col-lg-6">          
+            <h3>Tercer Contacto contacto</h3>
+<table class="table table-striped custab">
+<thead> 
+<tr>
+<th class="thshow">Fecha/Llamada:</th>
+<th class="thshow">Fecha/correo:</th>
+<th class="thshow">Observaciones:</th>
+</tr>
+</thead>
+<tbody>
+   <tr>
+     <td class="tdshow"><%= @bitacora.tcfechallamada%></td>        
+      <td class="tdshow"><%= @bitacora.tcfechacorreo%></td>  
+      <td class="tdshow"><%= @bitacora.tcobservaciones%></td>         
+        </tr>
+           </tbody>
+            </table>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-lg-8">
+            <h3>Resultado</h3>
+<table class="table table-striped custab">
+<thead> 
+<tr>
+<th class="thshow">Resultado:</th>
+
+</tr>
+</thead>
+<tbody>
+   <tr>
+      <td class="tdshow"><%= @bitacora.resultado%></td>         
+        </tr>
+           </tbody>
+            </table>
+            </div>
+            </div>
+
+
 
 </div>

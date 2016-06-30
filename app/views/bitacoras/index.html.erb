@@ -80,23 +80,19 @@
     <table class="table table-striped custab">
 
   <thead>
-    <tr>
+    <tr><th><%= sort_link(@search, :estatus, "Estatus") %></th>
        <th><%= sort_link(@search, :nombre, "Nombre") %></th>
       <th><%= sort_link(@search, :telefono, "Telefono")%></th>
       <th><%= sort_link(@search, :correo, "Correo")%></th>
-      <th><%= sort_link(@search, :municipio, "Municipio")%></th>
       <th><%= sort_link(@search, :estado, "Estado")%></th>
+      <th><%= sort_link(@search, :municipio, "Municipio")%></th>
       <th><%= sort_link(@search, :area, "Area")%></th>
-      <th><%= sort_link(@search, :acreditado, "Acreditado")%></th>
-      <th><%= sort_link(@search, :alcalde, "Alcalde")%></th>
-      <th><%= sort_link(@search, :esquema, "Esquema")%></th>
-      <th><%= sort_link(@search, :convenio, "Convenio")%></th>
-      <th><%= sort_link(@search, :tipo, "Tipo")%></th>
-      <th><%= sort_link(@search, :Acuerdo, "Acuerdo")%></th>
-      <th><%= sort_link(@search, :fechaacuerdo, "Fechaacuerdo")%></th>
-      <th><%= sort_link(@search, :fechaseguimiento, "Fechaseguimiento")%></th>
-      <th><%= sort_link(@search, :fechaevaluacion,  "Fechaevaluacion")%></th>
-      <th><%= sort_link(@search, :resultado, "Resultado")%></th>
+        <th><%= sort_link(@search, :alcalde, "Alcalde")%></th>
+      <th><%= sort_link(@search, :estructura, "Estructura")%></th>
+        <th><%= sort_link(@search, :gruposcomunitarios, "Grupos comunitarios")%></th>
+         <th><%= sort_link(@search, :ampliacionmetas, "Ampliación de metas")%></th>
+       <th><%= sort_link(@search, :convenio, "Convenio")%></th>
+       <th><%= sort_link(@search, :tema, "Temas a convenir")%></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -104,25 +100,23 @@
   <tbody>
     <% @bitacoras.each do |bitacora| %>
       <tr>
+      <td><%= bitacora.estatus %></td>
         <td><%= bitacora.nombre %></td>
         <td><%= bitacora.telefono %></td>
         <td><%= bitacora.correo %></td>
-        <td><%= bitacora.municipio %></td>
         <td><%= bitacora.estado %></td>
+        <td><%= bitacora.municipio %></td>
         <td><%= bitacora.area %></td>
-        <td><%= bitacora.acreditado %></td>
         <td><%= bitacora.alcalde %></td>
-        <td><%= bitacora.esquema %></td>
+        <td><%= bitacora.estructura %></td>
+        <td><%= bitacora.gruposcomunitarios %></td>
+        <td><%= bitacora.ampliacionmetas %></td>
         <td><%= bitacora.convenio %></td>
-        <td><%= bitacora.tipo %></td>
-        <td><%= bitacora.acuerdo %></td>
-        <td><%= bitacora.fechaacuerdo %></td>
-        <td><%= bitacora.fechaseguimiento %></td>
-        <td><%= bitacora.fechaevaluacion %></td>
-        <td><%= bitacora.resultado %></td>
-        <td><%= link_to 'Show', bitacora %></td>
-        <td><%= link_to 'Edit', edit_bitacora_path(bitacora) %></td>
-        <td><%= link_to 'Destroy', bitacora, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= bitacora.tema %></td>
+       
+        <td><%= link_to 'Ver', bitacora %></td>
+        <td><%= link_to 'Editar', edit_bitacora_path(bitacora) %></td>
+        <td><%= link_to 'Eliminar', bitacora, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -138,4 +132,4 @@
 
 <br>
 
-<%= link_to 'New Bitacora', new_bitacora_path %>
+
