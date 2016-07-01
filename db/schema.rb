@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160629205239) do
+ActiveRecord::Schema.define(version: 20160701132950) do
 
   create_table "bitacoras", force: :cascade do |t|
     t.string   "nombre"
-    t.integer  "telefono"
+    t.integer  "telefono",             limit: 8
     t.string   "correo"
     t.string   "municipio"
     t.string   "estado"
@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 20160629205239) do
     t.date     "fechaseguimiento"
     t.date     "fechaevaluacion"
     t.string   "resultado"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "tema"
     t.date     "pcfechallamada"
     t.date     "pcfechacorreo"
