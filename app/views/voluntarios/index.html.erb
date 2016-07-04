@@ -79,7 +79,7 @@
  
  <div class="form-group">
   
-      <%= f.label :status_cont, "Status" %>
+      <%= f.label :status_cont, "Estatus" %>
     
     <%= f.select :status_cont, [["Inactivo", "Inactivo"], ["Aprobado", "Aprobado"]], { :prompt => "Elegir" }, { class: "form-control" } %>
     </div>
@@ -106,7 +106,12 @@
   </div>
 
 </div>
-
+<div class="col-lg-3">
+<div class="form-group">
+<%= f.label :colonia_cont, "Institución" %>
+<%= f.text_field :colonia_cont, class: "form-control", placeholder: "Institución", autofocus: true %>
+</div>
+</div>
   </div>
 <div class="row">
   <div class="form-group">
