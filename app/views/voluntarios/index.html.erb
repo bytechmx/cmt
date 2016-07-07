@@ -194,10 +194,10 @@
        
         
         <td><%= voluntario.status %></td>
-        <td><%= link_to "", voluntario.attachment_url, class:" glyphicon glyphicon-cloud-download" if voluntario.attachment? %></td>
+        <td><%= link_to "", voluntario.attachment_url, class:" glyphicon glyphicon-file-export" if voluntario.attachment? %></td>
         
-        <td><%= link_to '', voluntario, class:"glyphicon glyphicon-eye-open" %></td>
-        <td><%= link_to  edit_voluntario_path(voluntario), class:"glyphicon glyphicon-pencil" do  %>
+        <td><%= link_to '', voluntario, class:"glyphicon glyphicon-search" %></td>
+        <td><%= link_to  edit_voluntario_path(voluntario), class:"glyphicon glyphicon-edit" do  %>
         
         
         <% end %>
