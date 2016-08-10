@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160707194733) do
+ActiveRecord::Schema.define(version: 20160714134000) do
 
   create_table "bitacoras", force: :cascade do |t|
     t.string   "nombre"
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(version: 20160707194733) do
     t.string   "programa"
     t.decimal  "aportacion_cmt"
     t.decimal  "aportacion_beneficiario"
+    t.string   "asesor"
   end
 
 end

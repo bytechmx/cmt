@@ -32,6 +32,7 @@ class VoluntariosController < ApplicationController
 
     respond_to do |format|
       if @voluntario.save
+        UserMailer.registration_confirmation(@voluntario).deliver
         format.html { redirect_to @voluntario, notice: 'Voluntario was successfully created.' }
         format.json { render :show, status: :created, location: @voluntario }
       else
@@ -73,6 +74,6 @@ class VoluntariosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def voluntario_params
-      params.require(:voluntario).permit(:contacto, :fecha_solicitud, :fecha_autorizacion, :numero_registro, :nombre, :apellido, :estado, :municipio, :localidad, :colonia, :correo_electronico, :telefono, :status, :attachment, :comentarios, :validacionincentivos, :fecha_registro, :programa, :aportacion_cmt, :aportacion_beneficiario)
+      params.require(:voluntario).permit(:contacto, :fecha_solicitud, :fecha_autorizacion, :numero_registro, :nombre, :apellido, :estado, :municipio, :localidad, :colonia, :correo_electronico, :telefono, :status, :attachment, :comentarios, :validacionincentivos, :fecha_registro, :programa, :aportacion_cmt, :aportacion_beneficiario, :asesor)
     end
 end

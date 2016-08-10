@@ -152,7 +152,6 @@
     <th><%= sort_link(@search, :fecha_Registro, "Fecha de registro") %></th>
     <th><%= sort_link(@search, :fecha_solicitud, "Fecha de solicitud") %></th>
     <th><%= sort_link(@search, :fecha_autorizacion, "Fecha de autorización") %></th>
-    
     <th><%= sort_link(@search, :correo_electronico, "Email") %></th> 
     <th><%= sort_link(@search, :telefono, "Teléfono") %></th>
     <th><%= sort_link(@search, :colonia, "Institución") %></th>
@@ -176,25 +175,25 @@
       <tr>
         <td><%= voluntario.contacto %></td>
     
-        <td><%= voluntario.nombre %></td>
-        <td><%= voluntario.apellido %></td>
+        <td class="capitalize"><%= voluntario.nombre %></td>
+        <td class="capitalize"><%= voluntario.apellido %></td>
          <td><%= voluntario.fecha_registro %></td>
         <td><%= voluntario.fecha_solicitud %></td>
         <td><%= voluntario.fecha_autorizacion %></td>       
         <td><%= voluntario.correo_electronico %></td>
         <td><%= voluntario.telefono %></td>
-        <td><%= voluntario.colonia %></td>
+        <td  class="capitalize"><%= voluntario.colonia %></td>
         <td><%= voluntario.programa %></td>
         <td><%= voluntario.aportacion_cmt %></td>
         <td><%= voluntario.aportacion_beneficiario %></td>
         <td><%= voluntario.validacionincentivos %></td>
         <td><%= voluntario.estado %></td>
         <td><%= voluntario.municipio %></td>
-        <td><%= voluntario.localidad %></td>
+        <td class="capitalize"><%= voluntario.localidad %></td>
        
         
         <td><%= voluntario.status %></td>
-        <td><%= link_to "", voluntario.attachment_url, class:" glyphicon glyphicon-file-export" if voluntario.attachment? %></td>
+        <td><%= link_to "", voluntario.attachment_url, class:" glyphicon glyphicon-file", :target => "_blank" if voluntario.attachment? %></td>
         
         <td><%= link_to '', voluntario, class:"glyphicon glyphicon-search" %></td>
         <td><%= link_to  edit_voluntario_path(voluntario), class:"glyphicon glyphicon-edit" do  %>

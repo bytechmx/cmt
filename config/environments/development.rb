@@ -38,4 +38,13 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  config.action_mailer.default_url_options = { :host => 'http://supersonic-firefly-196428.nitrousapp.com' }
+  ActionMailer::Base.smtp_settings = {
+                    :address        => "cmt.org.mx",
+                    :port           => 587,
+                    :authentication => :plain,
+                    :user_name      => "sistemas2@cmt.org.mx",
+                    :password       => ".M4r14n4.2016!",
+                    :openssl_verify_mode  => 'none'
+  }
 end
